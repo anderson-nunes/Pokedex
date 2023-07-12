@@ -1,75 +1,96 @@
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
-// export const ContainerCard = styled.div`
+export const ContainerCard = styled.div`
 
-//   width: 440px;
-//   height: 210px;
-//   border-radius: 12px;
+  width: 440px;
+  height: 210px;
+  border-radius: 12px;
 
-//   h1 {
-//   color: #fff;
-//   }
-// `
+  h2 {
+  color: #fff;
+  }
 
-// export const FigurePokemon = styled.div`
-//   margin-left: 1rem;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
+  p {
+  color: #fff;
+  }
+`
 
-//   img {
-//     width: 193px;
-//     height: 193px;
-//     margin: -3rem 0.5rem;
-//   }
-// `
+export const ContainerFigure = styled.div`
+  margin-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-// export const ContainerStylePokemon = styled.div`
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-//   margin-left: 0.5rem;
-// `
+`
+export const ContainerImage = styled.div`
+  position: relative;
+`;
 
-// export const StylePokemon = styled.span`
-//   width: 91px;
-//   height: 31px;
-//   border-radius: 8px;
-//   border: 1px;
-//   padding: 5px 8px;
-//   background-color: #fff;
-//   margin-left: 0.5rem;
+export const BackgroundImage = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* width: 210.73px;
+  height: 210.73px; */
+`;
 
-// `
-// export const DetailPokemon = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin: 1rem 1rem;
+export const PokemonImage = styled.img`
+  position: relative;
+  z-index: 1;
+  width: 193px;
+  height: 193px;
+  margin: -3rem 0.5rem;
+`;
 
-//   a {
-//     text-decoration: underline;
-//     cursor: pointer;
-//     color: #fff;
-//   }
 
-// `
 
-// export const Capture = styled.div`
+export const ContainerStylePokemon = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0.5rem;
+`
 
-//   button {
-//   width: 146px;
-//   height: 38px;
-//   border-radius: 8px;
-//   padding: 4px 10px;
-//   background-color: #fff;
-//   color: #000;
-//   outline: none;
-//   border: none;
-//   cursor: pointer;
-//   font-size: 16px;
-//   font-weight: 400;
-//   line-height: 24px;
-//   }
+export const StylePokemon = styled.span`
+  width: 91px;
+  height: 31px;
+  border-radius: 8px;
+  border: 1px;
+  padding: 5px 8px;
+  background-color: #fff;
+  margin-left: 0.5rem;
 
-// `
+`
+export const DetailPokemon = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1rem;
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+  }
+
+`
+
+export const Capture = styled.div`
+
+  button {
+  width: 146px;
+  height: 38px;
+  border-radius: 8px;
+  padding: 4px 10px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+  }
+
+`
