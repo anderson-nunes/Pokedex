@@ -1,38 +1,38 @@
-// import { createContext, useEffect, useState } from "react";
-// import axios from 'axios'
+import { createContext, useEffect, useState } from "react";
+import axios from 'axios'
 
 
-// export const PokemonContext = createContext()
+export const PokemonContext = createContext()
 
-// const PokemonProvider = ({ children }) => {
+const PokemonProvider = ({ children }) => {
 
-//   const [pokemons, setPokemons] = useState([])
+  const [pokemons, setPokemons] = useState([])
 
-//   useEffect(() => {
-//     getPokemons()
-//   }, [])
+  useEffect(() => {
+    getPokemons()
+  }, [])
 
-//   const getPokemons = async () => {
+  const getPokemons = async () => {
 
-//     let pokemonsPoints = []
+    let pokemonsPoints = []
 
-//     for (let i = 1; i < 21; i++) {
-//       pokemonsPoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
-//     }
+    for (let i = 1; i < 21; i++) {
+      pokemonsPoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
+    }
 
-//     await axios
-//       .all(pokemonsPoints.map((pokemonsPoint) => axios.get(pokemonsPoint)))
-//       .then((response) => setPokemons(response))
-//       .catch((erro) => console.log(erro))
-//   }
+    await axios
+      .all(pokemonsPoints.map((pokemonsPoint) => axios.get(pokemonsPoint)))
+      .then((response) => setPokemons(response))
+      .catch((erro) => console.log(erro))
+  }
 
-//   console.log('Pokemons => ', pokemons)
+  console.log('Pokemons => ', pokemons)
 
-//   return (
-//     <PokemonContext.Provider value={{ pokemons, setPokemons, getPokemons }}>
-//       {children}
-//     </PokemonContext.Provider>
-//   )
-// }
+  return (
+    <PokemonContext.Provider value={{ pokemons, setPokemons, getPokemons }}>
+      {children}
+    </PokemonContext.Provider>
+  )
+}
 
-// export default PokemonProvider
+export default PokemonProvider
