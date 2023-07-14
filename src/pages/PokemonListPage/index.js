@@ -8,6 +8,8 @@ export const PokemonListPage = ({ types }) => {
 
   const { pokemons, setPokemons } = useContext(PokemonContext)
 
+  console.log("Tipo do pokemon", types)
+
   return (
     <>
       <Header />

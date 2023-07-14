@@ -19,16 +19,13 @@ const PokemonCardProvider = ({ children }) => {
     }
   }, [pokemonCart])
 
-
-
   const addPokemonToCart = (pokemons, name) => {
 
-    const existingItem = pokemonCart.find((item) => item.data.name === name);
+    const existingPokemon = pokemonCart.find((item) => item.data.name === name);
 
-    if (existingItem) {
-      // Se o item já estiver na pokebola, exibe a mensagem e não adiciona novamente
+    if (existingPokemon) {
       alert(
-        "Esse Pokemon Já Foi Capturado em Nosso Sistema Não Podemos Capturar Novamente"
+        "Esse Pokemon Já Foi Capturado, escolha outro Pokemon"
       );
       return;
     }
@@ -58,7 +55,6 @@ const PokemonCardProvider = ({ children }) => {
     } else {
       setPokemonCart([...pokemonCart, newItem])
     }
-
   }
 
   return (

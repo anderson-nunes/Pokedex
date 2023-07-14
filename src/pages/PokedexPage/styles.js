@@ -3,18 +3,13 @@ import styled from 'styled-components';
 export const ContainerCard = styled.div`
 
   max-width: 100%;
-  height: auto;
+  min-height: 80vh;
   background-color: #5E5E5E;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 4rem;
   padding: 4rem;
-
-  h1 {
-  width: 200px;
-  color: red;
-  }
 `
 
 export const ContainerPokedex = styled.div`
@@ -23,6 +18,15 @@ export const ContainerPokedex = styled.div`
   height: 210px;
   border-radius: 12px;
   border: 1px solid black;
+
+  h2, p {
+  color: #fff;
+  }
+
+  h1 {
+  background-color: red;
+  color: white;
+  }
 
 `
 
@@ -68,8 +72,9 @@ export const StylePokemon = styled.span`
   border-radius: 8px;
   border: 1px;
   padding: 5px 8px;
-  background-color: #fff;
+  /* background-color: #fff; */
   margin-left: 0.5rem;
+  color: black;
 
 `
 export const DetailPokemon = styled.div`
@@ -86,15 +91,15 @@ export const DetailPokemon = styled.div`
 
 `
 
-export const Capture = styled.div`
+export const Delete = styled.div`
 
   button {
   width: 146px;
   height: 38px;
   border-radius: 8px;
   padding: 4px 10px;
-  background-color: #fff;
-  color: #000;
+  background-color: #FF6262;
+  color: #fff;
   cursor: pointer;
   outline: none;
   border: none;

@@ -20,24 +20,24 @@ import water from '../../assetsTypesPokemons/water.png'
 
 const typeImagesPokemons = {
 
-  ImgBug: bug,
-  ImgDark: dark,
-  ImgDragon: dragon,
-  ImgElectric: electric,
-  ImgFairy: fairy,
-  ImgFighting: fighting,
-  ImgFire: fire,
-  ImgFlying: flying,
-  ImgGhost: ghost,
-  ImgGrass: grass,
-  ImgGround: ground,
-  ImgIce: ice,
-  ImgNormal: normal,
-  ImgPoison: poison,
-  ImgPsychic: psychic,
-  ImgRock: rock,
-  ImgSteel: steel,
-  ImgWater: water
+  bug: bug,
+  dark: dark,
+  dragon: dragon,
+  electric: electric,
+  fairy: fairy,
+  fighting: fighting,
+  fire: fire,
+  flying: flying,
+  ghost: ghost,
+  grass: grass,
+  ground: ground,
+  ice: ice,
+  normal: normal,
+  poison: poison,
+  psychic: psychic,
+  rock: rock,
+  steel: steel,
+  water: water
 }
 
 export default typeImagesPokemons

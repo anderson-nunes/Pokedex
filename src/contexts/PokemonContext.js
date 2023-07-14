@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from 'axios'
 
-
 export const PokemonContext = createContext()
 
 const PokemonProvider = ({ children }) => {
@@ -16,7 +15,7 @@ const PokemonProvider = ({ children }) => {
 
     let pokemonsPoints = []
 
-    for (let i = 1; i < 21; i++) {
+    for (let i = 1; i < 22; i++) {
       pokemonsPoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
     }
 
@@ -26,10 +25,13 @@ const PokemonProvider = ({ children }) => {
       .catch((erro) => console.log(erro))
   }
 
-  console.log('Pokemons => ', pokemons)
-
   return (
-    <PokemonContext.Provider value={{ pokemons, setPokemons, getPokemons }}>
+    <PokemonContext.Provider
+      value={{
+        pokemons,
+        setPokemons,
+        getPokemons,
+      }}>
       {children}
     </PokemonContext.Provider>
   )

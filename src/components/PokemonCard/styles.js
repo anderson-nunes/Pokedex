@@ -42,13 +42,10 @@ export const PokemonImage = styled.img`
   margin: -3rem 0.5rem;
 `;
 
-
-
 export const ContainerStylePokemon = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 0.5rem;
 `
 
 export const StylePokemon = styled.span`
@@ -57,7 +54,6 @@ export const StylePokemon = styled.span`
   border-radius: 8px;
   border: 1px;
   padding: 5px 8px;
-  background-color: #fff;
   margin-left: 0.5rem;
 
 `
@@ -92,5 +88,23 @@ export const Capture = styled.div`
   line-height: 24px;
   position: relative;
   }
+`
 
+export const Delete = styled.div`
+
+  button {
+  width: 146px;
+  height: 38px;
+  border-radius: 8px;
+  padding: 4px 10px;
+  background-color: #FF6262;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+  }
 `
