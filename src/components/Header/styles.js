@@ -9,6 +9,15 @@ export const Header = styled.header`
   align-items: center;
 `;
 
+export const ButtonListPage = styled.h1`
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #000;
+`
+
 export const LogoContainer = styled.div`
   flex: 10;
   display: flex;
@@ -42,3 +51,18 @@ export const Button = styled.button`
   margin-right: 2rem;
   cursor: pointer;
 `;
+
+export const ButtonDeletePokemon = styled.button`
+  width: 226px;
+  height: 57px;
+  border-radius: 8px;
+  padding: 4px 10px;
+  background-color: #FF6262;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+`

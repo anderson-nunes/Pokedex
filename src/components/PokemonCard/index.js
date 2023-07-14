@@ -1,20 +1,18 @@
-import { Link } from 'react-router-dom';
 import typeImagesPokemons from '../../assetsTypesPokemons/dataTypesPokemons/dataTypesPokemons'
 import pokeBola from '../../assets/pokeBola.png'
 import * as S from './styles'
-import { Header } from '../Header';
 import { PokemonCardContext } from '../../contexts/PokemonCardContext';
+import { goToPokemonDetailPage } from '../../routes/coordinator';
 import { useContext } from 'react';
-
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Card = ({ image, name, types, id, pokemon }) => {
 
-  console.log('valor type => ', types)
-
   const { addPokemonToCart } = useContext(PokemonCardContext)
 
-  console.log('capturando o pokemon', addPokemonToCart)
+  const navigate = useNavigate()
 
+  const location = useLocation()
 
   let backgroundColor;
   const pokemonTypes = types.split(" ")
@@ -60,20 +58,28 @@ export const Card = ({ image, name, types, id, pokemon }) => {
         </S.ContainerImage>
       </S.ContainerFigure>
       <S.ContainerStylePokemon>
-        <S.StylePokemon>
-          <span>{types}</span>
-        </S.StylePokemon>
-        <S.StylePokemon>
-          {/* <span>Poison</span> */}
-        </S.StylePokemon>
+        {pokemonTypes.map((type, index) => (
+          <S.StylePokemon key={index}>
+            <span>
+              <img src={typeImagesPokemons[type]} alt={type} />
+            </span>
+          </S.StylePokemon>
+        ))}
       </S.ContainerStylePokemon>
       <S.DetailPokemon>
-        <Link to={`/detailPage`}>
-          <a>Detalhes</a>
-        </Link>
-        <S.Capture>
-          <button onClick={() => addPokemonToCart(pokemon, name)}>Capturar!</button>
-        </S.Capture>
+        <a onClick={() => goToPokemonDetailPage(navigate)}>Detalhes</a>
+
+        {location.pathname === '/' &&
+          <S.Capture>
+            <button onClick={() => addPokemonToCart(pokemon, name, types)}>Capturar!</button>
+          </S.Capture>
+        }
+
+        {location.pathname === '/pokedexPage' &&
+          <S.Delete>
+            <button>Excluir</button>
+          </S.Delete>
+        }
       </S.DetailPokemon>
     </S.ContainerCard>
   )
