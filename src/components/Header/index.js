@@ -20,10 +20,12 @@ export const Header = () => {
         {location.pathname !== '/' &&
           <S.ButtonListPage onClick={() => goToPokemonListPage(navigate)}>
             Todos Pokémons
-          </S.ButtonListPage>}
+          </S.ButtonListPage>
+        }
         <S.LogoContainer>
           <S.Logo src={logo} alt="Logo Pokémon" />
         </S.LogoContainer>
+
         {location.pathname === '/' ?
           <S.ButtonContainer>
             <S.Button onClick={() => goToPokedexPage(navigate)}>

@@ -8,7 +8,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Card = ({ image, name, types, id, pokemon }) => {
 
-  const { addPokemonToCart } = useContext(PokemonCardContext)
+  const { addPokemonToCart, removePokemon } = useContext(PokemonCardContext)
 
   const navigate = useNavigate()
 
@@ -77,7 +77,7 @@ export const Card = ({ image, name, types, id, pokemon }) => {
 
         {location.pathname === '/pokedexPage' &&
           <S.Delete>
-            <button>Excluir</button>
+            <button onClick={() => removePokemon(id)}>Excluir</button>
           </S.Delete>
         }
       </S.DetailPokemon>

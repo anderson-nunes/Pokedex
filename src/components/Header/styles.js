@@ -5,8 +5,10 @@ export const Header = styled.header`
   height: 160px;
   background-color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  position: relative;
+
 `;
 
 export const ButtonListPage = styled.h1`
@@ -16,13 +18,14 @@ export const ButtonListPage = styled.h1`
   cursor: pointer;
   text-decoration: underline;
   color: #000;
+  position: absolute;
+  left: 5%;
 `
 
 export const LogoContainer = styled.div`
-  flex: 10;
   display: flex;
   justify-content: center;
-  margin-left: 14rem;
+  position: absolute;
 `;
 
 export const Logo = styled.img`
@@ -65,4 +68,5 @@ export const ButtonDeletePokemon = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
+  margin-left: 85rem;
 `

@@ -57,6 +57,16 @@ const PokemonCardProvider = ({ children }) => {
     }
   }
 
+  const removePokemon = (id) => {
+
+    const removePokemonItem = pokemonCart.filter((item) => {
+
+      return id !== item.data.id
+    })
+
+    setPokemonCart(removePokemonItem)
+  }
+
   return (
     <PokemonCardContext.Provider
       value={{
@@ -64,7 +74,8 @@ const PokemonCardProvider = ({ children }) => {
         setPokemonCart,
         itemAmount,
         setItemAmount,
-        addPokemonToCart
+        addPokemonToCart,
+        removePokemon
       }}
     >
       {children}

@@ -108,5 +108,16 @@ export const Delete = styled.div`
   line-height: 24px;
   position: relative;
   }
+`
 
+export const Title = styled.div`
+  max-width: 100%;
+  height: 120px;
+  padding: 0.5rem;
+  background-color: #5E5E5E;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 72px;
+  padding-left: 14rem;
 `
