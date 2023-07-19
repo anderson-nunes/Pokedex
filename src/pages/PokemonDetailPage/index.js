@@ -1,11 +1,24 @@
 import React, { useContext } from 'react'
 import { Header } from '../../components/Header'
 import * as S from './styles'
-import { PokemonCardContext } from '../../contexts/PokemonCardContext'
+import { PokemonContext } from '../../contexts/PokemonContext'
+
+import { useParams } from 'react-router-dom'
 
 export const PokemonDetailPage = () => {
 
-  const { pokemonCart } = useContext(PokemonCardContext)
+  const { name } = useParams()
+
+  const { pokemons } = useContext(PokemonContext)
+
+
+  const pokemon = pokemons.find(
+    (pokemon) => pokemon.data.name === name.toLowerCase()
+  );
+
+  console.log('Pokemons Aqui =>>', pokemons)
+
+  console.log(pokemon)
 
   return (
     <div>
@@ -17,11 +30,12 @@ export const PokemonDetailPage = () => {
         <S.ContainerDetailPokemon>
           <S.Image01>
             <S.FirstImage>
-              <img src="" alt="" />
+              <img src={pokemon.data.sprites.versions["generation-v"]["black-white"].animated.front_default} alt="" />
             </S.FirstImage>
             <S.SecondImage>
-              <img src="" alt="" />
+              <img src={pokemon.data.sprites.versions["generation-v"]["black-white"].animated.back_default} alt="" />
             </S.SecondImage>
+            <h3>{pokemon.data.name}</h3>
           </S.Image01>
           {/* <S.Image02>
             <S.ImageColumn>

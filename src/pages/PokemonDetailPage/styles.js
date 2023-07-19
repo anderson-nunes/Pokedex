@@ -41,6 +41,13 @@ export const FirstImage = styled.div`
   border-radius: 8px;
   background-color: #fff;
   margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100px;
+  }
 `
 
 export const SecondImage = styled.div`
@@ -49,6 +56,13 @@ export const SecondImage = styled.div`
   border-radius: 8px;
   background-color: #fff;
   margin: 2rem;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+
+    img {
+    width: 100px;  
+  }
 `
 
 export const Image02 = styled.div`

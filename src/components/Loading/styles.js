@@ -2,11 +2,16 @@ import styled from 'styled-components';
 
 export const ContainerPikachu = styled.div`
 
- width: 50%;
+ width: 30%;
+
 
   img {
   display: block;
-  width: 40vw;  
+  width: 25vw;  
+  }
+
+  h2 {
+  text-align: center;
   }
 
   @keyframes pikachu-animation {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerCard = styled.div`
 
   max-width: 100%;
-  height: 100vh;
+    min-height: 80vh;
   background-color: #5E5E5E;
   display: flex;
   justify-content: center;
