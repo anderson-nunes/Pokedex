@@ -4,7 +4,7 @@ import * as S from './styles'
 import { PokemonCardContext } from '../../contexts/PokemonCardContext';
 import { goToPokemonDetailPage } from '../../routes/coordinator';
 import { useContext } from 'react';
-import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Card = ({ image, name, types, id, pokemon }) => {
 
@@ -68,7 +68,7 @@ export const Card = ({ image, name, types, id, pokemon }) => {
       </S.ContainerStylePokemon>
       <S.DetailPokemon>
 
-        <a onClick={() => goToPokemonDetailPage(navigate, name)}>Detalhes</a>
+        <a onClick={() => goToPokemonDetailPage(navigate, name, types)}>Detalhes</a>
 
         {location.pathname === '/' &&
           <S.Capture>
