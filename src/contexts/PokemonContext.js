@@ -7,6 +7,10 @@ const PokemonProvider = ({ children }) => {
 
   const [pokemons, setPokemons] = useState([])
 
+  const [isLoading, setIsLoading] = useState(true)
+
+  const [isError, setIsError] = useState(false)
+
   useEffect(() => {
     getPokemons()
   }, [])
@@ -21,8 +25,16 @@ const PokemonProvider = ({ children }) => {
 
     await axios
       .all(pokemonsPoints.map((pokemonsPoint) => axios.get(pokemonsPoint)))
-      .then((response) => setPokemons(response))
-      .catch((erro) => console.log(erro))
+      .then((response) => {
+        setPokemons(response);
+        setIsLoading(false)
+        setTimeout(() => setIsLoading(false), 3000)
+      })
+      .catch((error) => {
+        setIsLoading(false)
+        setIsError(true)
+        console.log(error)
+      })
   }
 
   return (
@@ -31,6 +43,8 @@ const PokemonProvider = ({ children }) => {
         pokemons,
         setPokemons,
         getPokemons,
+        isLoading,
+        isError
       }}>
       {children}
     </PokemonContext.Provider>
