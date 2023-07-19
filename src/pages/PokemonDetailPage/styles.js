@@ -63,6 +63,7 @@ export const ImageColumn = styled.div`
 `
 
 export const ThirdImage = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
@@ -84,6 +85,7 @@ export const PokemonStatus = styled.div`
   font-size: 48px;
   font-weight: 700;
   line-height: 58.09px;
+  margin-top: 0;
   }
 `
 
@@ -92,6 +94,7 @@ export const Image03 = styled.div`
   height: 453px;
   border-radius: 8px;
   background-color: #fff;
+  margin-top: 2.65rem;
 `
 
 export const FourthImage = styled.div`
@@ -104,20 +107,22 @@ export const FourthImage = styled.div`
     position: absolute;
     top: -140px;
     width: 270px;
-    height: 270px;  
+    height: 270px;
   }
 `
 
 export const StylePokemon = styled.div`
   
   span {
+  position: absolute;
   width: 91px;
   height: 31px;
   border-radius: 8px;
   border: 1px;
-  padding: 5px 8px;
+  padding: 5px 4px;
   display: flex;
   gap: .5rem;
+  top: 30rem;
   }
 `
 
