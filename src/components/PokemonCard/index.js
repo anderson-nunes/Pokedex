@@ -67,15 +67,12 @@ export const Card = ({ image, name, types, id, pokemon }) => {
         ))}
       </S.ContainerStylePokemon>
       <S.DetailPokemon>
-
         <a onClick={() => goToPokemonDetailPage(navigate, name, types)}>Detalhes</a>
-
         {location.pathname === '/' &&
           <S.Capture>
             <button onClick={() => addPokemonToCart(pokemon, name, types)}>Capturar!</button>
           </S.Capture>
         }
-
         {location.pathname === '/pokedexPage' &&
           <S.Delete>
             <button onClick={() => removePokemon(id)}>Excluir</button>

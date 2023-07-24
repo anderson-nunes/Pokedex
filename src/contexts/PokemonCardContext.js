@@ -4,7 +4,9 @@ export const PokemonCardContext = createContext()
 
 const PokemonCardProvider = ({ children }) => {
 
-  const [pokemonCart, setPokemonCart] = useState([])
+  const initialPokemonAdded = localStorage.getItem('pokemonCart')
+
+  const [pokemonCart, setPokemonCart] = useState(JSON.parse(initialPokemonAdded) || [])
 
   const [itemAmount, setItemAmount] = useState(0);
 
@@ -66,6 +68,16 @@ const PokemonCardProvider = ({ children }) => {
 
     setPokemonCart(removePokemonItem)
   }
+
+  useEffect(() => {
+
+    if (pokemonCart.length >= 0) {
+
+      localStorage.setItem('pokemonCart', JSON.stringify(pokemonCart))
+    }
+
+  }, [pokemonCart])
+
 
   return (
     <PokemonCardContext.Provider
