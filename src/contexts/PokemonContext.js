@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { BASE_URL } from "../constants/BASE_URL";
 import axios from 'axios'
 
 export const PokemonContext = createContext()
@@ -20,7 +21,7 @@ const PokemonProvider = ({ children }) => {
     let pokemonsPoints = []
 
     for (let i = 1; i < 22; i++) {
-      pokemonsPoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
+      pokemonsPoints.push(`${BASE_URL}${i}/`)
     }
 
     await axios

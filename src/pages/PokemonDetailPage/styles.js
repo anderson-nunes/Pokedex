@@ -17,13 +17,13 @@ export const ContainerDetailPokemon = styled.div`
   border-radius: 37px;
 `
 
-export const Image01 = styled.div`
+export const ContainerImages = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
 `
 
-export const FirstImage = styled.div`
+export const ImageOne = styled.div`
   width: 282px;
   height: 282px;
   border-radius: 8px;
@@ -37,7 +37,7 @@ export const FirstImage = styled.div`
   }
 `
 
-export const SecondImage = styled.div`
+export const ImageTwo = styled.div`
   width: 282px;
   height: 282px;
   border-radius: 8px;
@@ -51,25 +51,72 @@ export const SecondImage = styled.div`
   }
 `
 
-export const Image02 = styled.div`
-  display: flex;
-`
-
-export const ImageColumn = styled.div`
+export const ContainerBaseStats = styled.div`
   width: 343px;
   height: 613px;
-  border-radius: 8px;
-  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  background-color: white;
 `
 
-export const ThirdImage = styled.div`
+export const DetailBaseStats = styled.div`
+  width: 307px;
+  height: 257px;
+  background-color: #fff;
+  margin-left: 1rem;
+
+  h3 {
+    font-size:24px;
+    font-weight: 800;
+    line-height: 29.05px;
+  }
+`
+
+export const BaseStats = styled.div`
+  border-bottom: 1px solid #f1f1f1;
+  display: grid;
+  grid-template: 1fr / 25% 10% 1fr;
+  gap: 15px;
+  height: 2rem;
+
+  > p {
+    margin: auto 0px;
+  }
+`;
+
+export const StatsAttack = styled.p`
+  text-align: right;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+`;
+
+export const StatsBase = styled.p`
+  text-align: right;
+`;
+
+export const ProgressionBar = styled.div`
+  --progress: calc((${(prop) => prop.base} / 80) * 100);
+  display: flex;
+  padding: 0.6rem;
+
+  &::before {
+    content: "";
+    border-radius: 8px;
+    width: calc(var(--progress) * 1%);
+    background-color: hsl(var(--progress), 70%, 50%);
+  }
+`;
+
+export const ContainerMove = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
 `
 
-export const PokemonStatus = styled.div`
+export const DetailStatus = styled.div`
   width: 292px;
   color: #fff;
 
@@ -89,7 +136,7 @@ export const PokemonStatus = styled.div`
   }
 `
 
-export const Image03 = styled.div`
+export const ContainerDetailMoves = styled.div`
   width: 292px;
   height: 453px;
   border-radius: 8px;
@@ -97,7 +144,7 @@ export const Image03 = styled.div`
   margin-top: 2.65rem;
 `
 
-export const FourthImage = styled.div`
+export const DetailImagePokemon = styled.div`
   display: flex;
   position: relative;
   max-width: 100%;
@@ -111,7 +158,7 @@ export const FourthImage = styled.div`
   }
 `
 
-export const StylePokemon = styled.div`
+export const DetailStyle = styled.div`
   
   span {
   position: absolute;
@@ -137,3 +184,6 @@ export const Title = styled.div`
   line-height: 72px;
   padding-left: 17rem;
 `
+
+
+
