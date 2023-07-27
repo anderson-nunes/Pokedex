@@ -70,3 +70,6 @@ export const ButtonDeletePokemon = styled.button`
   outline: none;
   margin-left: 85rem;
 `
+
+
+

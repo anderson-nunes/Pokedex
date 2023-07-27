@@ -142,7 +142,35 @@ export const ContainerDetailMoves = styled.div`
   border-radius: 8px;
   background-color: #fff;
   margin-top: 2.65rem;
+
+    h3 {
+    font-size:24px;
+    font-weight: 800;
+    line-height: 29.05px;
+  }
 `
+
+export const ContainerMoves = styled.div`
+  margin-left: 1rem;
+`
+
+export const DetailMoves = styled.div`
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 350px;
+  margin-top: 1rem;
+  overflow-y: auto;
+`
+
+export const Moves = styled.div`
+  background-color: #ececec;
+  border: 1px dashed #00000024;
+  border-radius: 12px;
+  align-self: flex-start;
+  padding: 8px 10px;
+`;
 
 export const DetailImagePokemon = styled.div`
   display: flex;

@@ -16,6 +16,8 @@ export const PokemonDetailPage = () => {
     (pokemon) => pokemon.data.name === name.toLowerCase()
   );
 
+  console.log(pokemon)
+
   if (!pokemon) {
     // Se o Pokémon não for encontrado, pode exibir uma mensagem de erro ou redirecionar para uma página de erro
     return <div>{isError}</div>;
@@ -100,7 +102,6 @@ export const PokemonDetailPage = () => {
                   </S.BaseStats>
                 </S.DetailBaseStats>
               </S.ContainerBaseStats>
-
               <S.ContainerMove>
                 <S.DetailStatus>
                   <span>
@@ -111,7 +112,6 @@ export const PokemonDetailPage = () => {
                   <h2>{pokemon.data.name.charAt(0).toUpperCase() +
                     pokemon.data.name.slice(1)}
                   </h2>
-
                   <S.DetailStyle>
                     <span>
                       {elementPokemon}
@@ -119,15 +119,32 @@ export const PokemonDetailPage = () => {
                   </S.DetailStyle>
                 </S.DetailStatus>
                 <S.ContainerDetailMoves>
-
-
+                  <S.ContainerMoves>
+                    <h3>Moves:</h3>
+                    <S.DetailMoves>
+                      <S.Moves>
+                        {pokemon.data.moves[0].move.name.charAt(0).toUpperCase() +
+                          pokemon.data.moves[0].move.name.slice(1)}
+                      </S.Moves>
+                      <S.Moves>
+                        {pokemon.data.moves[1].move.name.charAt(0).toUpperCase() +
+                          pokemon.data.moves[1].move.name.slice(1)}
+                      </S.Moves>
+                      <S.Moves>
+                        {pokemon.data.moves[2].move.name.charAt(0).toUpperCase() +
+                          pokemon.data.moves[2].move.name.slice(1)}
+                      </S.Moves>
+                      <S.Moves>
+                        {pokemon.data.moves[3].move.name.charAt(0).toUpperCase() +
+                          pokemon.data.moves[3].move.name.slice(1)}
+                      </S.Moves>
+                    </S.DetailMoves>
+                  </S.ContainerMoves>
                 </S.ContainerDetailMoves>
               </S.ContainerMove>
-
               <S.DetailImagePokemon>
                 <img src={pokemon.data.sprites.other["official-artwork"].front_default} alt="" />
               </S.DetailImagePokemon>
-
             </S.ContainerDetailPokemon>
         }
       </S.ContainerDetailPage>
