@@ -12,9 +12,7 @@ const Router = () => {
         <Route path='/detailPage/:name/:types' element={<PokemonDetailPage />} />
         <Route path='/pokedexPage' element={<PokedexPage />} />
       </Routes>
-
     </BrowserRouter>
   )
 }
-
 export default Router

@@ -8,7 +8,6 @@ export const Header = styled.header`
   justify-content: space-around;
   align-items: center;
   position: relative;
-
 `;
 
 export const ButtonListPage = styled.h1`
@@ -55,21 +54,33 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const ButtonDeletePokemon = styled.button`
+export const ButtonDetail = styled.button`
   width: 226px;
-  height: 57px;
-  border-radius: 8px;
-  padding: 4px 10px;
-  background-color: #FF6262;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #fff;
-  border: none;
+   height: 57px;
+   border-radius: 8px;
+   padding: 4px 10px;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   color: #fff;
+   border: none;
   cursor: pointer;
-  outline: none;
-  margin-left: 85rem;
-`
 
+   outline: none;
+   margin-left: 85rem;
+  background-color:${props => (props.backgroundColor)};
+
+  @media screen and (min-width: 280px) and (max-width: 450px){
+    width: 18vw;
+    height: 4vh;
+    font-size: .5em;
+    right: 2%;
+  }
+
+  @media screen and (min-width: 2000px) {
+    width:8vw;
+    font-size:0.85em;
+  }
+`;
 
 

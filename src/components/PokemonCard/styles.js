@@ -8,9 +8,15 @@ export const ContainerCard = styled.div`
 
   h2 {
   color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.73px;
   }
 
   p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
   color: #fff;
   }
 `
@@ -30,8 +36,7 @@ export const BackgroundImage = styled.img`
   position: absolute;
   top: 0;
   right: 0;
-  /* width: 210.73px;
-  height: 210.73px; */
+  width: 210.73px;
 `;
 
 export const PokemonImage = styled.img`
@@ -49,13 +54,10 @@ export const ContainerStylePokemon = styled.div`
 `
 
 export const StylePokemon = styled.span`
-  width: 91px;
-  height: 31px;
   border-radius: 8px;
   border: 1px;
-  padding: 5px 8px;
+  padding: 5px 2px;
   margin-left: 0.5rem;
-
 `
 export const DetailPokemon = styled.div`
   display: flex;
@@ -67,8 +69,10 @@ export const DetailPokemon = styled.div`
     text-decoration: underline;
     cursor: pointer;
     color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
   }
-
 `
 
 export const Capture = styled.div`

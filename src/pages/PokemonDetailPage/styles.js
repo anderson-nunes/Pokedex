@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import background from '../../assets/background.png'
 
 export const ContainerDetailPage = styled.div`
   max-width: 100%;
@@ -7,6 +8,10 @@ export const ContainerDetailPage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(${background});
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-x: 30%;
 `
 
 export const ContainerDetailPokemon = styled.div`
@@ -15,6 +20,11 @@ export const ContainerDetailPokemon = styled.div`
   display: flex;
   gap: 2rem;
   border-radius: 37px;
+  background-image: url(${background});
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
 `
 
 export const ContainerImages = styled.div`
@@ -63,7 +73,7 @@ export const DetailBaseStats = styled.div`
   width: 307px;
   height: 257px;
   background-color: #fff;
-  margin-left: 1rem;
+  margin: 1rem;
 
   h3 {
     font-size:24px;
@@ -141,7 +151,7 @@ export const ContainerDetailMoves = styled.div`
   height: 453px;
   border-radius: 8px;
   background-color: #fff;
-  margin-top: 2.65rem;
+  margin-top: 5rem;
 
     h3 {
     font-size:24px;
@@ -151,7 +161,8 @@ export const ContainerDetailMoves = styled.div`
 `
 
 export const ContainerMoves = styled.div`
-  margin-left: 1rem;
+
+  margin: 1rem;
 `
 
 export const DetailMoves = styled.div`
@@ -194,20 +205,19 @@ export const DetailStyle = styled.div`
   height: 31px;
   border-radius: 8px;
   border: 1px;
-  padding: 5px 4px;
   display: flex;
   gap: .5rem;
-  top: 30rem;
+  margin-top: 1rem;
   }
 `
 
 export const Title = styled.div`
   max-width: 100%;
   height: 100px;
-  padding: 0.5rem;
+  padding: 2.5rem;
   background-color: #5E5E5E;
   color: #fff;
-  font-size: 30px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 72px;
   padding-left: 17rem;
