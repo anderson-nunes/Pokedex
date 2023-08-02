@@ -10,6 +10,9 @@ const PokemonCardProvider = ({ children }) => {
 
   const [itemAmount, setItemAmount] = useState(0);
 
+  const [modalPokemon, setModalPokemon] = useState(false)
+  const [modalStatus, setModalStatus] = useState()
+
 
   useEffect(() => {
     if (pokemonCart) {
@@ -21,43 +24,32 @@ const PokemonCardProvider = ({ children }) => {
     }
   }, [pokemonCart])
 
-  const addPokemonToCart = (pokemons, name) => {
+  // const addPokemonToCart = (pokemonToAdd) => {
 
-    const existingPokemon = pokemonCart.find((item) => item.data.name === name);
+  //   const isAlreadyOnPokedex = pokemonCart.find((pokemonInPokedex) => pokemonInPokedex.data.name === pokemonToAdd.data.name)
 
-    if (existingPokemon) {
-      alert(
-        "Esse Pokemon Já Foi Capturado, escolha outro Pokemon"
-      );
-      return;
-    }
+  //   if (!isAlreadyOnPokedex) {
 
-    const newItem = { ...pokemons, amount: 1 }
+  //     const newPokedex = [...pokemonCart, pokemonToAdd]
 
-    const cartPokemon = pokemonCart.find((item) => {
+  //     setPokemonCart(newPokedex)
 
-      return item.name === name
-    })
+  //     setModalPokemon(true)
+  //     setModalStatus(0)
+  //   }
+  // }
 
-    if (cartPokemon) {
 
-      const newCart = [...pokemonCart].map((item) => {
+  const addPokemonToCart = (pokemon) => {
 
-        if (item.name === name) {
+    const newCart = [...pokemonCart, pokemon]
 
-          return { ...item, amount: cartPokemon.amount + 1 }
+    setPokemonCart(newCart)
 
-        } else {
-
-          return item
-        }
-      })
-      setPokemonCart(newCart)
-
-    } else {
-      setPokemonCart([...pokemonCart, newItem])
-    }
+    setModalPokemon(true)
+    setModalStatus(0)
   }
+
 
   const removePokemon = (id) => {
 
@@ -67,6 +59,9 @@ const PokemonCardProvider = ({ children }) => {
     })
 
     setPokemonCart(removePokemonItem)
+
+    setModalPokemon(true)
+    setModalStatus(1)
   }
 
   useEffect(() => {
@@ -87,7 +82,11 @@ const PokemonCardProvider = ({ children }) => {
         itemAmount,
         setItemAmount,
         addPokemonToCart,
-        removePokemon
+        removePokemon,
+        modalPokemon,
+        setModalPokemon,
+        modalStatus,
+        setModalStatus,
       }}
     >
       {children}

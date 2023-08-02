@@ -1,10 +1,10 @@
 import typeImagesPokemons from '../../assetsTypesPokemons/dataTypesPokemons/dataTypesPokemons'
 import pokeBola from '../../assets/pokeBola.png'
-import * as S from './styles'
 import { PokemonCardContext } from '../../contexts/PokemonCardContext';
 import { goToPokemonDetailPage } from '../../routes/coordinator';
 import { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import * as S from './styles'
 
 export const Card = ({ image, name, types, id, pokemon }) => {
 
@@ -67,10 +67,10 @@ export const Card = ({ image, name, types, id, pokemon }) => {
         ))}
       </S.ContainerStylePokemon>
       <S.DetailPokemon>
-        <a onClick={() => goToPokemonDetailPage(navigate, name, types)}>Detalhes</a>
+        <a onClick={() => goToPokemonDetailPage(navigate, name, types, id)}>Detalhes</a>
         {location.pathname === '/' &&
           <S.Capture>
-            <button onClick={() => addPokemonToCart(pokemon, name, types)}>Capturar!</button>
+            <button onClick={() => addPokemonToCart(pokemon)}>Capturar!</button>
           </S.Capture>
         }
         {location.pathname === '/pokedexPage' &&

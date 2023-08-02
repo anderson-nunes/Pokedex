@@ -20,9 +20,12 @@ const PokemonProvider = ({ children }) => {
 
     let pokemonsPoints = []
 
-    for (let i = 1; i < 22; i++) {
+    for (let i = 1; i < 25; i++) {
       pokemonsPoints.push(`${BASE_URL}${i}/`)
     }
+
+    //https://pokeapi.co/api/v2/pokemon/?limit=100
+
 
     await axios
       .all(pokemonsPoints.map((pokemonsPoint) => axios.get(pokemonsPoint)))

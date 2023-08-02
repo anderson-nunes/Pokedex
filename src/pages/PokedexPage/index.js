@@ -9,6 +9,7 @@ import * as S from './styles'
 export const PokedexPage = () => {
 
   const { pokemonCart, removePokemon } = useContext(PokemonCardContext)
+
   const { isLoading, isError } = useContext(PokemonContext)
 
   return (

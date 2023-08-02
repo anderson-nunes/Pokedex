@@ -27,7 +27,6 @@ export const ContainerPokedex = styled.div`
   background-color: red;
   color: white;
   }
-
 `
 
 export const ContainerFigure = styled.div`
@@ -35,7 +34,6 @@ export const ContainerFigure = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 `
 export const ContainerImage = styled.div`
   position: relative;
@@ -45,8 +43,6 @@ export const BackgroundImage = styled.img`
   position: absolute;
   top: 0;
   right: 0;
-  /* width: 210.73px;
-  height: 210.73px; */
 `;
 
 export const PokemonImage = styled.img`
@@ -56,8 +52,6 @@ export const PokemonImage = styled.img`
   height: 193px;
   margin: -3rem 0.5rem;
 `;
-
-
 
 export const ContainerStylePokemon = styled.div`
   display: flex;
@@ -72,7 +66,6 @@ export const StylePokemon = styled.span`
   border-radius: 8px;
   border: 1px;
   padding: 5px 8px;
-  /* background-color: #fff; */
   margin-left: 0.5rem;
   color: black;
 
@@ -88,7 +81,6 @@ export const DetailPokemon = styled.div`
     cursor: pointer;
     color: #fff;
   }
-
 `
 
 export const Delete = styled.div`
@@ -113,10 +105,10 @@ export const Delete = styled.div`
 export const Title = styled.div`
   max-width: 100%;
   height: 120px;
-  padding: 0.5rem;
+  padding: 2.5rem;
   background-color: #5E5E5E;
   color: #fff;
-  font-size: 30px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 72px;
   padding-left: 14rem;

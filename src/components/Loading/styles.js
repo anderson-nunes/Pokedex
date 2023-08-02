@@ -4,7 +4,6 @@ export const ContainerPikachu = styled.div`
 
  width: 30%;
 
-
   img {
   display: block;
   width: 25vw;  
