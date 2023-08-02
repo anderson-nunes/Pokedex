@@ -65,6 +65,7 @@ export const ButtonDetail = styled.button`
    color: #fff;
    border: none;
   cursor: pointer;
+
    outline: none;
    margin-left: 85rem;
   background-color:${props => (props.backgroundColor)};
@@ -81,4 +82,5 @@ export const ButtonDetail = styled.button`
     font-size:0.85em;
   }
 `;
+
 

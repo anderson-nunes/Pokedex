@@ -161,6 +161,7 @@ export const ContainerDetailMoves = styled.div`
 `
 
 export const ContainerMoves = styled.div`
+
   margin: 1rem;
 `
 
