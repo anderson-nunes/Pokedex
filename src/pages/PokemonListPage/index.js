@@ -8,6 +8,7 @@ import { ModalPokemon } from "../../components/Modal.js/index.";
 import { PokemonCardContext } from "../../contexts/PokemonCardContext";
 
 export const PokemonListPage = () => {
+
   const { pokemons, isLoading, isError } = useContext(PokemonContext);
 
   const { pokemonCart } = useContext(PokemonCardContext);

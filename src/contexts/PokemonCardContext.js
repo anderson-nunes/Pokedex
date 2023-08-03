@@ -24,6 +24,7 @@ const PokemonCardProvider = ({ children }) => {
     }
   }, [pokemonCart])
 
+
   // const addPokemonToCart = (pokemonToAdd) => {
 
   //   const isAlreadyOnPokedex = pokemonCart.find((pokemonInPokedex) => pokemonInPokedex.data.name === pokemonToAdd.data.name)
