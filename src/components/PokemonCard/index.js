@@ -1,4 +1,4 @@
-import typeImagesPokemons from '../../assetsTypesPokemons/dataTypesPokemons/dataTypesPokemons'
+import typesPokemons from '../../assets/typesPokemons/dataTypesPokemons/dataTypesPokemons'
 import pokeBola from '../../assets/pokeBola.png'
 import { PokemonCardContext } from '../../contexts/PokemonCardContext';
 import { goToPokemonDetailPage } from '../../routes/coordinator';
@@ -61,7 +61,7 @@ export const Card = ({ image, name, types, id, pokemon }) => {
         {pokemonTypes.map((type, index) => (
           <S.StylePokemon key={index}>
             <span>
-              <img src={typeImagesPokemons[type]} alt={type} />
+              <img src={typesPokemons[type]} alt={type} />
             </span>
           </S.StylePokemon>
         ))}

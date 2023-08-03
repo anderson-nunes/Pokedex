@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Header } from "../../components/Header";
 import { PokemonContext } from "../../contexts/PokemonContext";
-import typeImagesPokemons from "../../assetsTypesPokemons/dataTypesPokemons/dataTypesPokemons";
+import typesPokemons from '../../assets/typesPokemons/dataTypesPokemons/dataTypesPokemons'
 import { IsLoading } from "../../components/Loading";
 import { useParams } from "react-router-dom";
 import * as S from "./styles";
@@ -15,7 +15,7 @@ export const PokemonDetailPage = () => {
     (pokemon) => pokemon.data.name === name.toLowerCase()
   );
 
-  console.log(pokemon)
+  console.log(pokemon);
 
   if (!pokemon) {
     // Se o Pokémon não for encontrado, pode exibir uma mensagem de erro ou redirecionar para uma página de erro
@@ -23,7 +23,7 @@ export const PokemonDetailPage = () => {
   }
 
   const elementPokemon = pokemon.data.types.map((type) => {
-    const typeImage = typeImagesPokemons[type.type.name.toLowerCase()];
+    const typeImage = typesPokemons[type.type.name.toLowerCase()];
     return <img src={typeImage} alt={type.type.name} key={type.type.name} />;
   });
 
@@ -60,7 +60,6 @@ export const PokemonDetailPage = () => {
       <S.Title>
         <h1>Detalhes</h1>
       </S.Title>
-
       <S.ContainerDetailPage>
         {isError ? (
           <p>ERRO!! TENTE NOVAMENTE</p>
@@ -167,92 +166,6 @@ export const PokemonDetailPage = () => {
             </S.DetailImagePokemon>
           </S.ContainerDetailPokemon>
         )}
-      <S.ContainerDetailPage >
-        {isError ? <p>ERRO!! TENTE NOVAMENTE</p> :
-          isLoading ? <IsLoading /> :
-            <S.ContainerDetailPokemon style={{ backgroundColor: color }}>
-              <S.ContainerImages>
-                <S.ImageOne>
-                  <img src={pokemon.data.sprites.versions["generation-v"]["black-white"].animated.front_default} alt="" />
-                </S.ImageOne>
-                <S.ImageTwo>
-                  <img src={pokemon.data.sprites.versions["generation-v"]["black-white"].animated.back_default} alt="" />
-                </S.ImageTwo>
-              </S.ContainerImages>
-              <S.ContainerBaseStats>
-                <S.DetailBaseStats>
-                  <h3>Base stats</h3>
-                  {pokemon.data.stats.map((stat) => {
-                    return (
-                      <S.BaseStats key={stat.stat.name}>
-                        <S.StatsAttack>
-                          {stat.stat.name === "hp"
-                            ? "HP"
-                            : stat.stat.name === "special-attack"
-                              ? "Sp. Atk"
-                              : stat.stat.name === "special-defense"
-                                ? "Sp. Def"
-                                : stat.stat.name}
-                        </S.StatsAttack>
-                        <S.StatsBase>{stat.base_stat}</S.StatsBase>
-                        <S.ProgressionBar base={stat.base_stat}></S.ProgressionBar>
-                      </S.BaseStats>
-                    )
-                  })}
-                  <S.BaseStats>
-                    <S.StatsAttack>Total</S.StatsAttack>
-                    <S.StatsBase>
-                      <strong>{totalStats}</strong>
-                    </S.StatsBase>
-                  </S.BaseStats>
-                </S.DetailBaseStats>
-              </S.ContainerBaseStats>
-              <S.ContainerMove>
-                <S.DetailStatus>
-                  <span>
-                    {pokemon.data.id < 10 ?
-                      `#0${pokemon.data.id}` :
-                      `#${pokemon.data.id}`}
-                  </span>
-                  <h2>{pokemon.data.name.charAt(0).toUpperCase() +
-                    pokemon.data.name.slice(1)}
-                  </h2>
-                  <S.DetailStyle>
-                    <span>
-                      {elementPokemon}
-                    </span>
-                  </S.DetailStyle>
-                </S.DetailStatus>
-                <S.ContainerDetailMoves>
-                  <S.ContainerMoves>
-                    <h3>Moves:</h3>
-                    <S.DetailMoves>
-                      <S.Moves>
-                        {pokemon.data.moves[0].move.name.charAt(0).toUpperCase() +
-                          pokemon.data.moves[0].move.name.slice(1)}
-                      </S.Moves>
-                      <S.Moves>
-                        {pokemon.data.moves[1].move.name.charAt(0).toUpperCase() +
-                          pokemon.data.moves[1].move.name.slice(1)}
-                      </S.Moves>
-                      <S.Moves>
-                        {pokemon.data.moves[2].move.name.charAt(0).toUpperCase() +
-                          pokemon.data.moves[2].move.name.slice(1)}
-                      </S.Moves>
-                      <S.Moves>
-                        {pokemon.data.moves[3].move.name.charAt(0).toUpperCase() +
-                          pokemon.data.moves[3].move.name.slice(1)}
-                      </S.Moves>
-                    </S.DetailMoves>
-                  </S.ContainerMoves>
-                </S.ContainerDetailMoves>
-              </S.ContainerMove>
-              <S.DetailImagePokemon>
-                <img src={pokemon.data.sprites.other["official-artwork"].front_default} alt="" />
-              </S.DetailImagePokemon>
-            </S.ContainerDetailPokemon>
-        }
-
       </S.ContainerDetailPage>
     </div>
   );
