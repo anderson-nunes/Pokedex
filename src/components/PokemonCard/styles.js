@@ -91,6 +91,11 @@ export const Capture = styled.div`
   font-weight: 400;
   line-height: 24px;
   position: relative;
+  transition: ease .5s;
+  }
+
+  button:hover {
+  background-color: #DCDCDC;
   }
 `
 
@@ -110,5 +115,9 @@ export const Delete = styled.div`
   font-weight: 400;
   line-height: 24px;
   position: relative;
+  }
+
+  button:hover {
+  background-color:#FF6347;
   }
 `

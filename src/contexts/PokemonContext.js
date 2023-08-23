@@ -20,7 +20,7 @@ const PokemonProvider = ({ children }) => {
 
     let pokemonsPoints = []
 
-    for (let i = 1; i < 24; i++) {
+    for (let i = 1; i < 23; i++) {
       pokemonsPoints.push(`${BASE_URL}/${i}`)
     }
 
