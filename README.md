@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+## Índice
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Link de Acesso](#Link-de-Acesso)
+- [Resumo do Projeto](#Resumo-do-projeto)
+- [Definição do Produto](#Definição-do-Projeto)
+- [Lista de Requisitos](#Lista-de-Requisitos)
+- [Instalação](#Instalação)
+- [Iniciando](#Iniciando)
+- [Tecnologias e Ferramentas Utilizadas](#Tecnologias-e-Ferramentas-Utilizadas)
+- [Estrutura do projeto](#Estrutura-do-projeto)
+- [Funcionalidade](#Funcionalidade)
+- [Desktop](#Desktop)
+- [Mobile](#Mobile)
 
-## Available Scripts
+## Link de Acesso
 
-In the project directory, you can run:
+Link surge: projeto-pokedex-api-rose.vercel.app/
 
-### `npm start`
+## Resumo do Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O Projeto React e APIs é um site de pokémons que possui três páginas: Home, Pokedex e Detalhes. Sendo possível adicionar á pokedex e remove-los.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O projeto terá como fonte de dados para a sua criação a Poke Api, uma Api pública, muito usada para aplicações focadas em aprendizado de programação e também usada em cases de processos seletivos.
 
-### `npm test`
+Os conteúdos principais a serem estudados são:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Integração de APIs
+React Router
+Design Systems
+Estado Global
 
-### `npm run build`
+## Instalação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js
+- npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para instalar as dependências no diretório do seu projeto, execute o seguinte comando:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- npm install
 
-### `npm run eject`
+## Iniciando
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para iniciar o aplicativo, execute o seguinte comando:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- npm run start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tecnologias e Ferramentas Utilizadas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Este site foi construído com as seguintes tecnologias:
 
-## Learn More
+- React
+- React-Hooks
+- React-Router-Dom
+- React useContext
+- Api-rest
+- Axios
+- Styled-Components
+- Chakra UI
+- React-icons
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Estrutura do projeto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![estrutura](./src/assets/estrutura.png)
 
-### Code Splitting
+#### Arquivo src
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contém todas as pastas e arquivos do projeto.
 
-### Analyzing the Bundle Size
+#### Pasta assets
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contém todas as imagens dos types dos pokemons e outras usadas neste projeto.
 
-### Making a Progressive Web App
+#### Pasta Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contém:
 
-### Advanced Configuration
+- `PokemonCard` -> renderiza informações e botões para pokemon.
+- `Header` -> cada página terá um header com uma interface específica.
+- `Modal` -> é ativado quando adiciona ou remove pokemon da pokedex.
+- `Loading` -> é ativado quando realiza o carregamento da página.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Pasta constants
 
-### Deployment
+Contém a Url padrão da API utilizada.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Pasta contexts
 
-### `npm run build` fails to minify
+Contém os arquivos de contexto utilizado no projeto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Pasta Pages
+
+Contém:
+
+- `PokemonListPage` -> Página inicial, onde haverá a lista de pokemons para interagir.
+- `PokemonDetailPage` -> detalhes do pokemon selecionado.
+- `PokedexPage` - Página onde terá os pokemons adicionados.
+
+#### Pasta routes
+
+Contém :
+
+- `coordinator` -> retorna funções (buttons) para navegação entre as páginas . Utilizando parâmetros para seu destino.
+- `Router`-> Componente que armazena o controle das páginas , identificando cada uma com um valor que é passado para `coordinator` e será utilizado no `App.js`
+
+## Funcionalidade
+
+## ![PokemonCard](./src/assets/PokemonCard.png)
+
+## `CardPokemon`
+
+- O botão `detalhes` Direciona para página onde será possível ver todos os dados e adicionar e/ou remover o pokemon da pokedex.
+- O botão `Capturar` Captura o pokemon selecionado e o envia para pokedex.
