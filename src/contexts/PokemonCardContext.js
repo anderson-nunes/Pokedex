@@ -24,23 +24,6 @@ const PokemonCardProvider = ({ children }) => {
     }
   }, [pokemonCart])
 
-
-  // const addPokemonToCart = (pokemonToAdd) => {
-
-  //   const isAlreadyOnPokedex = pokemonCart.find((pokemonInPokedex) => pokemonInPokedex.data.name === pokemonToAdd.data.name)
-
-  //   if (!isAlreadyOnPokedex) {
-
-  //     const newPokedex = [...pokemonCart, pokemonToAdd]
-
-  //     setPokemonCart(newPokedex)
-
-  //     setModalPokemon(true)
-  //     setModalStatus(0)
-  //   }
-  // }
-
-
   const addPokemonToCart = (pokemon) => {
 
     const newCart = [...pokemonCart, pokemon]
@@ -50,7 +33,6 @@ const PokemonCardProvider = ({ children }) => {
     setModalPokemon(true)
     setModalStatus(0)
   }
-
 
   const removePokemon = (id) => {
 
@@ -68,11 +50,11 @@ const PokemonCardProvider = ({ children }) => {
   useEffect(() => {
 
     if (pokemonCart.length >= 0) {
-
       localStorage.setItem('pokemonCart', JSON.stringify(pokemonCart))
     }
-
   }, [pokemonCart])
+
+  console.log('HELOOOOO', pokemonCart)
 
 
   return (

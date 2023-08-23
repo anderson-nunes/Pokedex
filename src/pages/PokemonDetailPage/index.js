@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import * as S from "./styles";
 
 export const PokemonDetailPage = () => {
+
   const { name } = useParams();
 
   const { pokemons, isLoading, isError } = useContext(PokemonContext);
