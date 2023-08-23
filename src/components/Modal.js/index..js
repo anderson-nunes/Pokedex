@@ -8,7 +8,6 @@ import {
   Container,
 } from "@chakra-ui/react";
 import { Title, Text } from "./styles";
-
 import { PokemonCardContext } from "../../contexts/PokemonCardContext";
 import { useContext } from "react";
 
