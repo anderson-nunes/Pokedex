@@ -10,7 +10,6 @@
 - [Estrutura do projeto](#Estrutura-do-projeto)
 - [Funcionalidade](#Funcionalidade)
 - [Desktop](#Desktop)
-- [Mobile](#Mobile)
 
 ## Link de Acesso
 
@@ -110,3 +109,5 @@ Contém :
 
 - O botão `detalhes` Direciona para página onde será possível ver todos os dados e adicionar e/ou remover o pokemon da pokedex.
 - O botão `Capturar` Captura o pokemon selecionado e o envia para pokedex.
+
+## Desktop
