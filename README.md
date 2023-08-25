@@ -1,6 +1,8 @@
 <h1 align="center">Pokedex</h1>
 <div align="center">
+
 ![Projeto gif](./src/assets/projeto.gif)
+
 </div>
 
 ## Índice
