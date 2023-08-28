@@ -35,35 +35,39 @@ Estado Global
 
 ## Definição do Produto e Funcionalidade
 
-## ![PokemonListPage](./src//assets/PokemonListPage.png)
-
 ## `PokemonListPage`
+
+## ![PokemonListPage](./src//assets/PokemonListPage.png)
 
 - Na PokemonListPage o usuário tem a possibilidade de visuálizar os pokemons, com recursos de capturar, visualizar detalhamento e verificar a sua pokedex personalizada.
 
-## ![PokedexPage](./src//assets/PokedexPage.png)
-
 ## `PokedexPage`
+
+## ![PokedexPage](./src//assets/PokedexPage.png)
 
 - Na PokedexPage o usuário tem a possibilidade de visualizar todos os pokemons capturados, com recursos de excluir e vialuzar detalhamento, atualizando a página seus dados permaneceram salvos.
 
-## ![PokemonDetailPage](./src//assets/PokemonDetailPage.png)
-
 ## `PokemonDetailPage`
 
+## ![PokemonDetailPage](./src//assets/PokemonDetailPage.png)
+
 - Na PokemonDetailPage o usuário tem a possibilidade de visualizar todos os detalhes do pokemon, com recursos de capturar caso ele já não esteja na sua pokedex ou excluir se ele já estiver nela.
+
+## `Modal Adicionar`
 
 ## ![ModalAdicionar](./src/assets/ModalAdicionado.png)
 
 - Ao capturar o seu pokemon uma mensagem será exibida, detalhando que o usuário adicionou a sua pokedex.
 
+## `Modal Excluir`
+
 ## ![ModalExcluir](./src/assets/ModalExcluir.png.png)
 
 - Ao excluir o seu pokemon uma mensagem será exibida, detalhando que o usuário excluiu da sua pokedex.
 
-## ![PokemonCard](./src/assets/PokemonCard.png)
-
 ## `Card`
+
+## ![PokemonCard](./src/assets/PokemonCard.png)
 
 - O botão `detalhes` Direciona para página onde será possível ver todos os dados e adicionar e/ou remover o pokemon da pokedex.
 - O botão `Capturar` Captura o pokemon selecionado e o envia para pokedex.
