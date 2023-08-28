@@ -18,7 +18,7 @@
 
 ## Link de Acesso
 
-Link surge:[Aqui](projeto-pokedex-api-rose.vercel.app/)
+Link surge: [projeto-pokedex](projeto-pokedex-api-rose.vercel.app/)
 
 ## Resumo do Projeto
 
