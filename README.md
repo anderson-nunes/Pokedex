@@ -61,7 +61,7 @@ Estado Global
 
 ## `Modal Excluir`
 
-## ![ModalExcluir](./src/assets/ModalExcluir.png.png)
+## ![ModalExcluir](./src/assets/ModalExcluir.png)
 
 - Ao excluir o seu pokemon uma mensagem será exibida, detalhando que o usuário excluiu da sua pokedex.
 
