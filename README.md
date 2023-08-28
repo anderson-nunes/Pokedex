@@ -28,10 +28,10 @@ O projeto terá como fonte de dados para a sua criação a [Poke Api](https://po
 
 Os conteúdos principais a serem estudados são:
 
-Integração de APIs
-React Router
-Design Systems
-Estado Global
+- Integração de APIs
+- React Router
+- Design Systems
+- Estado Global
 
 ## Definição do Produto e Funcionalidade
 
