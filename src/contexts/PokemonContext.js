@@ -38,36 +38,6 @@ const PokemonProvider = ({ children }) => {
       })
   }
 
-  // const getPokemons = async () => {
-
-  //   try {
-
-  //     const results = []
-
-  //     for (let i = 1; i <= 25; i++) {
-
-  //       results.push(axios.get(`${BASE_URL}/${i}`))
-  //     }
-
-  //     const responses = await Promise.all(results)
-
-  //     console.log(responses)
-
-  //     const pokemonData = responses.map((response) => response.data)
-
-  //     console.log(pokemonData)
-
-  //     setPokemons(pokemonData)
-
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-  // useEffect(() => {
-  //   getPokemons()
-  // }, [])
-
-
   return (
     <PokemonContext.Provider
       value={{
